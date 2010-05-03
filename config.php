@@ -30,7 +30,7 @@ function CheckAuthentication()
 	// user logs in your system.
 	// To be able to use session variables don't forget to add session_start().
 
-	return false;
+	return true;
 }
 
 // LicenseKey : Paste your license key here. If left blank, CKFinder will be
@@ -58,7 +58,7 @@ Examples:
 
 ATTENTION: The trailing slash is required.
 */
-$baseUrl = '/ckfinder/userfiles/';
+$baseUrl = '/media/img/';
 
 /*
 $baseDir : the path to the local directory (in the server) which points to the
@@ -177,27 +177,11 @@ Example: 'maxSize' => "8M",
 $config['DefaultResourceTypes'] = '';
 
 $config['ResourceType'][] = Array(
-		'name' => 'Files',				// Single quotes not allowed
-		'url' => $baseUrl . 'files',
-		'directory' => $baseDir . 'files',
-		'maxSize' => 0,
-		'allowedExtensions' => '7z,aiff,asf,avi,bmp,csv,doc,fla,flv,gif,gz,gzip,jpeg,jpg,mid,mov,mp3,mp4,mpc,mpeg,mpg,ods,odt,pdf,png,ppt,pxd,qt,ram,rar,rm,rmi,rmvb,rtf,sdc,sitd,swf,sxc,sxw,tar,tgz,tif,tiff,txt,vsd,wav,wma,wmv,xls,zip',
-		'deniedExtensions' => '');
-
-$config['ResourceType'][] = Array(
 		'name' => 'Images',
-		'url' => $baseUrl . 'images',
-		'directory' => $baseDir . 'images',
+		'url' => $baseUrl . '',
+		'directory' => $baseDir . '',
 		'maxSize' => 0,
-		'allowedExtensions' => 'bmp,gif,jpeg,jpg,png',
-		'deniedExtensions' => '');
-
-$config['ResourceType'][] = Array(
-		'name' => 'Flash',
-		'url' => $baseUrl . 'flash',
-		'directory' => $baseDir . 'flash',
-		'maxSize' => 0,
-		'allowedExtensions' => 'swf,flv',
+		'allowedExtensions' => 'gif,jpeg,jpg,png',
 		'deniedExtensions' => '');
 
 /*
